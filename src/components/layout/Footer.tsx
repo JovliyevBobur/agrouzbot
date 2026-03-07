@@ -1,17 +1,38 @@
 import { Link } from "react-router-dom";
-import { Sprout, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
+      {/* Newsletter */}
+      <div className="border-b border-background/10">
+        <div className="container py-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+            <div>
+              <h3 className="font-heading font-bold text-xl">Yangiliklardan xabardor bo'ling</h3>
+              <p className="text-sm opacity-70 mt-1">Agritech yangiliklari va foydali maslahatlar</p>
+            </div>
+            <div className="flex gap-2 w-full md:w-auto">
+              <Input
+                placeholder="Email manzilingiz"
+                className="bg-background/10 border-background/20 text-background placeholder:text-background/50 h-11"
+              />
+              <Button variant="secondary" size="icon" className="h-11 w-11 shrink-0">
+                <Send className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-heading font-bold text-xl">
-              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                <Sprout className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src="/logo.png" alt="Agro Bot" className="w-10 h-10 rounded-lg object-cover" />
               <span>Agro Bot</span>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
