@@ -8,6 +8,8 @@ import {
   TrendingUp, ArrowRight, Smartphone, Cloud, Cpu,
   CheckCircle2, Star, ChevronRight, Sprout, Zap
 } from "lucide-react";
+import heroFarmland from "@/assets/hero-farmland.jpg";
+import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -55,18 +57,20 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl" />
+      <section className="relative overflow-hidden">
+        {/* Background farmland image */}
+        <div className="absolute inset-0">
+          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
         </div>
-        <div className="container py-20 md:py-32 relative">
+
+        <div className="container py-24 md:py-36 relative">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm text-primary text-sm font-medium border border-primary/20"
             >
               <Sprout className="w-4 h-4" />
               O'zbekiston fermerlari uchun AI platforma
@@ -103,41 +107,32 @@ const Index = () => {
                   Boshlash <ArrowRight className="w-5 h-5 ml-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-8 h-13 rounded-xl" asChild>
+              <Button size="lg" variant="outline" className="text-base px-8 h-13 rounded-xl backdrop-blur-sm" asChild>
                 <Link to="/how-it-works">Demo ko'rish</Link>
               </Button>
             </motion.div>
           </div>
 
-          {/* Dashboard mockup */}
+          {/* Dashboard image */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-16 max-w-4xl mx-auto"
+            className="mt-16 max-w-5xl mx-auto"
           >
-            <div className="rounded-2xl border bg-card shadow-2xl shadow-primary/5 overflow-hidden">
+            <div className="rounded-2xl border bg-card/80 backdrop-blur-sm shadow-2xl shadow-primary/10 overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
                 <div className="w-3 h-3 rounded-full bg-sun/60" />
                 <div className="w-3 h-3 rounded-full bg-primary/60" />
                 <span className="ml-3 text-xs text-muted-foreground">Agro Bot Dashboard</span>
               </div>
-              <div className="p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { label: "Tuproq namligi", value: "68%", icon: Droplets, change: "+5%" },
-                  { label: "Harorat", value: "24°C", icon: Thermometer, change: "Normal" },
-                  { label: "pH daraja", value: "6.8", icon: Leaf, change: "Optimal" },
-                  { label: "NPK", value: "Yaxshi", icon: Sprout, change: "N:45" },
-                ].map((item, i) => (
-                  <div key={i} className="rounded-xl bg-muted/50 p-4 space-y-2">
-                    <item.icon className="w-5 h-5 text-primary" />
-                    <p className="text-2xl font-heading font-bold">{item.value}</p>
-                    <p className="text-xs text-muted-foreground">{item.label}</p>
-                    <span className="text-xs text-primary font-medium">{item.change}</span>
-                  </div>
-                ))}
-              </div>
+              <img
+                src={heroDashboard}
+                alt="Agro Bot AI Dashboard — tuproq tahlili, NDVI xarita, sug'orish jadvali"
+                className="w-full h-auto"
+                loading="lazy"
+              />
             </div>
           </motion.div>
         </div>
