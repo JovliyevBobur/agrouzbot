@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Moon, Sun, LogOut, UserCircle } from "lucide-react";
+import { Menu, X, Moon, Sun, LogOut, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
 import { useAuth } from "@/components/AuthProvider";
+import { useAdmin } from "@/hooks/useAdmin";
 
 const navItems = [
   { label: "Bosh sahifa", path: "/" },
@@ -22,6 +23,7 @@ const Navbar = () => {
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const { user, signOut } = useAuth();
+  const { isAdmin } = useAdmin();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b">
@@ -54,21 +56,20 @@ const Navbar = () => {
           </Button>
           {user ? (
             <>
-              <span className="text-sm text-muted-foreground max-w-[120px] truncate">
-                {user.email}
-              </span>
+              {isAdmin && (
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/admin"><Shield className="w-4 h-4 mr-1" /> Admin</Link>
+                </Button>
+              )}
+              <span className="text-sm text-muted-foreground max-w-[120px] truncate">{user.email}</span>
               <Button variant="ghost" size="icon" onClick={signOut} className="rounded-full">
                 <LogOut className="w-4 h-4" />
               </Button>
             </>
           ) : (
             <>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/auth">Kirish</Link>
-              </Button>
-              <Button size="sm" asChild>
-                <Link to="/auth">Boshlash</Link>
-              </Button>
+              <Button variant="ghost" size="sm" asChild><Link to="/auth">Kirish</Link></Button>
+              <Button size="sm" asChild><Link to="/auth">Boshlash</Link></Button>
             </>
           )}
         </div>
@@ -109,9 +110,16 @@ const Navbar = () => {
                 </Link>
               ))}
               {user ? (
-                <Button variant="outline" className="mt-2" onClick={() => { signOut(); setOpen(false); }}>
-                  <LogOut className="w-4 h-4 mr-2" /> Chiqish
-                </Button>
+                <>
+                  {isAdmin && (
+                    <Button variant="outline" className="mt-2" asChild>
+                      <Link to="/admin" onClick={() => setOpen(false)}><Shield className="w-4 h-4 mr-2" /> Admin Panel</Link>
+                    </Button>
+                  )}
+                  <Button variant="outline" className="mt-2" onClick={() => { signOut(); setOpen(false); }}>
+                    <LogOut className="w-4 h-4 mr-2" /> Chiqish
+                  </Button>
+                </>
               ) : (
                 <Button className="mt-2" asChild>
                   <Link to="/auth" onClick={() => setOpen(false)}>Kirish / Ro'yxat</Link>
