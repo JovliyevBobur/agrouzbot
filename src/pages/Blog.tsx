@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, Tag, Clock } from "lucide-react";
+import { Calendar, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 
