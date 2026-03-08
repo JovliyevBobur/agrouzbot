@@ -9,6 +9,7 @@ import AgroChat from "@/components/AgroChat";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
 import HowItWorks from "./pages/HowItWorks";
+import Profile from "./pages/Profile";
 import Pricing from "./pages/Pricing";
 import Investors from "./pages/Investors";
 import About from "./pages/About";
