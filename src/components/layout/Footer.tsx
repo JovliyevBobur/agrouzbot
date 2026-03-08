@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-50">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-50">
           <p>© 2026 Agro Bot. Barcha huquqlar himoyalangan.</p>
           <p>O'zbekiston fermerlari uchun ishlab chiqilgan</p>
         </div>

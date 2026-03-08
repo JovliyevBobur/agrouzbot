@@ -128,15 +128,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
+              {/* Map */}
               <Card className="overflow-hidden">
-                <div className="h-64 bg-muted flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <MapPin className="w-10 h-10 text-primary mx-auto" />
-                    <p className="text-sm text-muted-foreground">Xorazm viloyati, Tuproqqal'a tumani</p>
-                    <p className="text-xs text-muted-foreground">IT Park, Tuproqqal'a tumani</p>
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48876.45!2d60.92!3d41.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50e8d5c0d3f6d3%3A0x2a0e4e8b3e6c2d0e!2sTuproqqala%2C%20Xorazm%20Region%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                  width="100%"
+                  height="256"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Xorazm viloyati, Tuproqqal'a tumani xaritasi"
+                />
               </Card>
             </div>
           </div>
