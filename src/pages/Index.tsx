@@ -173,8 +173,9 @@ const Index = () => {
               <img
                 src={heroDashboard}
                 alt="Agro Bot AI Dashboard — tuproq tahlili, NDVI xarita, sug'orish jadvali"
-                className="w-full h-auto"
+                className="w-full h-auto rendering-crisp"
                 loading="lazy"
+                style={{ imageRendering: 'auto' }}
               />
             </div>
           </motion.div>
