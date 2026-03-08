@@ -163,19 +163,21 @@ const Index = () => {
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-20 max-w-5xl mx-auto"
           >
-            <div className="rounded-2xl border-2 border-white/20 bg-[hsl(150_25%_8%/0.95)] shadow-2xl shadow-black/50 overflow-hidden hover-lift">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/15 bg-black/50">
+            <div className="rounded-2xl border-2 border-white/30 bg-black shadow-2xl shadow-black/60 overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/20 bg-[hsl(150_25%_8%)]">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
                 <span className="ml-3 text-xs text-white font-medium">Agro Bot Dashboard</span>
               </div>
-              <img
-                src={heroDashboard}
-                alt="Agro Bot AI Dashboard — tuproq tahlili, NDVI xarita, sug'orish jadvali"
-                className="w-full h-auto brightness-110 contrast-105"
-                loading="lazy"
-              />
+              <div className="bg-black">
+                <img
+                  src={heroDashboard}
+                  alt="Agro Bot AI Dashboard — tuproq tahlili, NDVI xarita, sug'orish jadvali"
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </motion.div>
         </motion.div>
