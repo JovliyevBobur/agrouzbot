@@ -88,27 +88,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Creator */}
       <section className="py-20 md:py-28 bg-gradient-section">
         <div className="container">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Jamoamiz</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {team.map((t, i) => (
-              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-                <Card className="text-center h-full hover-lift border-0 shadow-lg shadow-primary/[0.03]">
-                  <CardContent className="p-6 space-y-3">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-leaf/10 flex items-center justify-center mx-auto">
-                      <span className="text-2xl font-heading font-bold text-primary">
-                        {t.name.split(" ").map(n => n[0]).join("")}
-                      </span>
-                    </div>
-                    <h3 className="font-heading font-semibold">{t.name}</h3>
-                    <p className="text-sm text-primary font-medium">{t.role}</p>
-                    <p className="text-xs text-muted-foreground">{t.desc}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <h2 className="text-3xl font-heading font-bold text-center mb-12">Loyiha yaratuvchisi</h2>
+          <div className="max-w-sm mx-auto">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
+              <Card className="text-center h-full hover-lift border-0 shadow-lg shadow-primary/[0.03]">
+                <CardContent className="p-8 space-y-4">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-leaf/10 flex items-center justify-center mx-auto">
+                    <span className="text-3xl font-heading font-bold text-primary">JB</span>
+                  </div>
+                  <h3 className="font-heading font-semibold text-xl">Jovliyev Bobur</h3>
+                  <p className="text-sm text-primary font-medium">Founder & Developer</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>
