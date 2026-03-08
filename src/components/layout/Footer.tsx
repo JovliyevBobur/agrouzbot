@@ -5,9 +5,9 @@ import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-[hsl(150,20%,8%)] text-[hsl(150,10%,85%)]">
       {/* Newsletter */}
-      <div className="border-b border-background/10">
+      <div className="border-b border-white/10">
         <div className="container py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
             <div>
@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="flex gap-2 w-full md:w-auto">
               <Input
                 placeholder="Email manzilingiz"
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/50 h-11"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-11"
               />
               <Button variant="secondary" size="icon" className="h-11 w-11 shrink-0">
                 <Send className="w-4 h-4" />
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-50">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-50">
           <p>© 2026 Agro Bot. Barcha huquqlar himoyalangan.</p>
           <p>O'zbekiston fermerlari uchun ishlab chiqilgan</p>
         </div>
