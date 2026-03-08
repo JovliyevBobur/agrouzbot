@@ -182,8 +182,8 @@ const Index = () => {
       </section>
 
       {/* Problems */}
-      <section className="py-24 md:py-32 relative">
-        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
+      <section className="py-24 md:py-32 relative bg-gradient-dark-green text-white">
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none opacity-30" />
         <div className="container relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
