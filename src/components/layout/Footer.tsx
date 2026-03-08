@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -78,6 +78,10 @@ const Footer = () => {
                 <MapPin className="w-4 h-4" />
                 <span>Xorazm viloyati, Tuproqqal'a tumani</span>
               </div>
+              <a href="https://t.me/agro_uzb_bot" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-100 transition-opacity">
+                <Bot className="w-4 h-4" />
+                <span>@agro_uzb_bot</span>
+              </a>
             </div>
           </div>
         </div>
