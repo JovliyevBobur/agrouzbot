@@ -69,23 +69,23 @@ const WeatherClock = () => {
   const WeatherIcon = weather ? getWeatherIcon(weather.weatherCode) : Cloud;
 
   return (
-    <div className="flex items-center gap-3 text-xs">
+    <div className="flex items-center gap-3 text-sm">
       {/* Clock */}
-      <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-primary/10 text-primary font-mono font-semibold">
-        <Clock className="w-3.5 h-3.5" />
-        <span>{hours}:{minutes}</span>
-        <span className="text-primary/50 text-[10px]">{seconds}</span>
+      <div className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-background/90 backdrop-blur-md shadow-lg border border-border/50 font-mono font-bold text-foreground">
+        <Clock className="w-4 h-4 text-primary" />
+        <span className="tracking-wide">{hours}:{minutes}</span>
+        <span className="text-muted-foreground text-xs">{seconds}</span>
       </div>
 
       {/* Weather */}
       {weather && (
-        <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-secondary/10 text-secondary-foreground">
-          <WeatherIcon className="w-4 h-4 text-secondary" />
-          <span className="font-semibold">{weather.temp}°C</span>
-          <div className="hidden sm:flex items-center gap-1.5 text-muted-foreground">
-            <Droplets className="w-3 h-3" />
+        <div className="flex items-center gap-2.5 px-3 py-2 rounded-full bg-background/90 backdrop-blur-md shadow-lg border border-border/50 font-semibold text-foreground">
+          <WeatherIcon className="w-4.5 h-4.5 text-primary" />
+          <span className="font-bold">{weather.temp}°C</span>
+          <div className="hidden sm:flex items-center gap-2 text-foreground/80">
+            <Droplets className="w-3.5 h-3.5 text-water" />
             <span>{weather.humidity}%</span>
-            <Wind className="w-3 h-3 ml-1" />
+            <Wind className="w-3.5 h-3.5 text-primary ml-0.5" />
             <span>{weather.windSpeed} km/h</span>
           </div>
         </div>
