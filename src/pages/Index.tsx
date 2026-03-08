@@ -81,8 +81,7 @@ const Index = () => {
       {/* Hero */}
       <section ref={heroRef} className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-dark-green">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110 opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(150_25%_8%)]" />
+          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110" />
         </motion.div>
 
         {/* Floating orbs */}
