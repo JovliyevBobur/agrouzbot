@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 const plans = [
@@ -14,6 +14,7 @@ const plans = [
     features: ["Asosiy tuproq tavsiyalari", "Ob-havo prognozi", "Haftalik SMS xabar", "O'zbek tilida interfeys"],
     cta: "Boshlash",
     popular: false,
+    gradient: "",
   },
   {
     name: "Fermer",
@@ -30,6 +31,7 @@ const plans = [
     ],
     cta: "Tanlash",
     popular: true,
+    gradient: "bg-gradient-to-br from-primary to-leaf",
   },
   {
     name: "Pro",
@@ -46,6 +48,7 @@ const plans = [
     ],
     cta: "Tanlash",
     popular: false,
+    gradient: "",
   },
   {
     name: "Enterprise",
@@ -63,17 +66,19 @@ const plans = [
     ],
     cta: "Bog'lanish",
     popular: false,
+    gradient: "",
   },
 ];
 
 const Pricing = () => {
   return (
     <Layout>
-      <section className="py-20 md:py-28 bg-gradient-hero">
-        <div className="container">
+      <section className="py-20 md:py-28 bg-gradient-hero relative">
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
+        <div className="container relative">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Narxlar</span>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold">Har bir fermer uchun mos narx</h1>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold">Har bir fermer uchun <span className="text-gradient-primary">mos narx</span></h1>
             <p className="text-lg text-muted-foreground">
               Bepul boshlang, kerak bo'lganda kengaytiring. Birinchi oyda bekor qilish bepul.
             </p>
@@ -87,19 +92,19 @@ const Pricing = () => {
             {plans.map((plan, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Card
-                  className={`h-full flex flex-col ${
-                    plan.popular ? "border-primary shadow-xl shadow-primary/10 relative" : ""
+                  className={`h-full flex flex-col hover-lift ${
+                    plan.popular ? "border-primary shadow-xl shadow-primary/10 relative scale-105" : "border-0 shadow-lg shadow-primary/[0.03]"
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                      Ommabop
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-leaf text-primary-foreground text-xs font-medium rounded-full flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" /> Ommabop
                     </div>
                   )}
                   <CardHeader className="pb-4">
@@ -120,11 +125,11 @@ const Pricing = () => {
                       ))}
                     </ul>
                     <Button
-                      className="mt-6 w-full rounded-xl"
+                      className="mt-6 w-full rounded-xl h-12"
                       variant={plan.popular ? "default" : "outline"}
                       asChild
                     >
-                      <Link to="/contact">{plan.cta}</Link>
+                      <Link to="/auth">{plan.cta} <ArrowRight className="w-4 h-4 ml-1" /></Link>
                     </Button>
                   </CardContent>
                 </Card>

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, LogOut, UserCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
+import { useAuth } from "@/components/AuthProvider";
 
 const navItems = [
   { label: "Bosh sahifa", path: "/" },
@@ -20,6 +21,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { user, signOut } = useAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b">
@@ -47,30 +49,33 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
+          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
             {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
           </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/contact">Kirish</Link>
-          </Button>
-          <Button size="sm" asChild>
-            <Link to="/contact">Boshlash</Link>
-          </Button>
+          {user ? (
+            <>
+              <span className="text-sm text-muted-foreground max-w-[120px] truncate">
+                {user.email}
+              </span>
+              <Button variant="ghost" size="icon" onClick={signOut} className="rounded-full">
+                <LogOut className="w-4 h-4" />
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/auth">Kirish</Link>
+              </Button>
+              <Button size="sm" asChild>
+                <Link to="/auth">Boshlash</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile toggle */}
         <div className="lg:hidden flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
+          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
             {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
           </Button>
           <button className="p-2" onClick={() => setOpen(!open)}>
@@ -103,9 +108,15 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button className="mt-2" asChild>
-                <Link to="/contact" onClick={() => setOpen(false)}>Boshlash</Link>
-              </Button>
+              {user ? (
+                <Button variant="outline" className="mt-2" onClick={() => { signOut(); setOpen(false); }}>
+                  <LogOut className="w-4 h-4 mr-2" /> Chiqish
+                </Button>
+              ) : (
+                <Button className="mt-2" asChild>
+                  <Link to="/auth" onClick={() => setOpen(false)}>Kirish / Ro'yxat</Link>
+                </Button>
+              )}
             </div>
           </motion.div>
         )}
