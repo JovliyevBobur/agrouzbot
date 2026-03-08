@@ -91,7 +91,7 @@ const Index = () => {
           <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-secondary/8 blur-3xl animate-float-delayed" />
         </div>
 
-        <motion.div style={{ opacity: heroOpacity }} className="container py-24 md:py-36 relative">
+        <motion.div style={{ opacity: heroOpacity }} className="container py-24 md:py-36 relative text-white">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
