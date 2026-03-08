@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  TrendingUp, Globe, DollarSign, Users, Target, ArrowRight,
-  BarChart3, Zap, Shield
+  TrendingUp, Globe, Users, Target, ArrowRight,
+  BarChart3, Zap
 } from "lucide-react";
 
 const marketStats = [
@@ -31,27 +31,27 @@ const growth = [
 const Investors = () => {
   return (
     <Layout>
-      <section className="py-20 md:py-28 bg-gradient-hero">
-        <div className="container">
+      <section className="py-20 md:py-28 bg-gradient-hero relative">
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
+        <div className="container relative">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Investorlar uchun</span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold">
-              $25B bozorga kirish imkoniyati
+              <span className="text-gradient-primary">$25B</span> bozorga kirish imkoniyati
             </h1>
             <p className="text-lg text-muted-foreground">
               Markaziy Osiyodagi birinchi AI-powered agritech platforma. Impact + Revenue.
             </p>
-            <Button size="lg" className="rounded-xl" asChild>
+            <Button size="lg" className="rounded-2xl h-14" asChild>
               <Link to="/contact">Pitch Deck olish <ArrowRight className="w-5 h-5 ml-1" /></Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Market */}
       <section className="py-20 md:py-28">
         <div className="container">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Bozor imkoniyati</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">Bozor imkoniyati</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {marketStats.map((s, i) => (
               <motion.div
@@ -61,10 +61,12 @@ const Investors = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <Card className="text-center hover:shadow-lg transition-shadow">
+                <Card className="text-center hover-lift border-0 shadow-lg shadow-primary/[0.03]">
                   <CardContent className="p-6 space-y-3">
-                    <s.icon className="w-8 h-8 text-primary mx-auto" />
-                    <p className="text-3xl font-heading font-bold">{s.value}</p>
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+                      <s.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <p className="text-3xl font-heading font-bold text-gradient-primary">{s.value}</p>
                     <p className="text-sm text-muted-foreground">{s.label}</p>
                   </CardContent>
                 </Card>
@@ -74,50 +76,53 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* Business Model */}
       <section className="py-20 md:py-28 bg-gradient-section">
         <div className="container">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Biznes modeli</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">Biznes modeli</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {revenueStreams.map((r, i) => (
-              <Card key={i} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-lg font-heading font-bold text-primary">{r.pct}</span>
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold">{r.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{r.desc}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <motion.div key={i} initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <Card className="hover-lift border-0 shadow-lg shadow-primary/[0.03]">
+                  <CardContent className="p-6 flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-leaf/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-lg font-heading font-bold text-primary">{r.pct}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold">{r.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{r.desc}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Growth */}
       <section className="py-20 md:py-28">
         <div className="container">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">O'sish strategiyasi</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">O'sish strategiyasi</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {growth.map((g, i) => (
-              <Card key={i} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 space-y-3">
-                  <span className="text-sm font-medium text-primary">{g.phase}</span>
-                  <p className="text-3xl font-heading font-bold">{g.revenue}</p>
-                  <p className="text-lg font-semibold">{g.users} foydalanuvchi</p>
-                  <p className="text-sm text-muted-foreground">{g.focus}</p>
-                </CardContent>
-              </Card>
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}>
+                <Card className="text-center hover-lift border-0 shadow-lg shadow-primary/[0.03]">
+                  <CardContent className="p-6 space-y-3">
+                    <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{g.phase}</span>
+                    <p className="text-3xl font-heading font-bold text-gradient-primary">{g.revenue}</p>
+                    <p className="text-lg font-semibold">{g.users} foydalanuvchi</p>
+                    <p className="text-sm text-muted-foreground">{g.focus}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Unit Economics */}
-      <section className="py-16 bg-primary">
-        <div className="container">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-leaf" />
+        <div className="container relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-primary-foreground">
             {[
               { label: "LTV:CAC", value: "6x" },
@@ -125,23 +130,22 @@ const Investors = () => {
               { label: "Churn Rate", value: "<5%" },
               { label: "Payback", value: "4 oy" },
             ].map((item, i) => (
-              <div key={i}>
-                <p className="text-3xl md:text-4xl font-heading font-bold">{item.value}</p>
-                <p className="text-sm opacity-80 mt-1">{item.label}</p>
-              </div>
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <p className="text-3xl md:text-5xl font-heading font-bold">{item.value}</p>
+                <p className="text-sm opacity-80 mt-2">{item.label}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 md:py-28">
         <div className="container text-center max-w-2xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-heading font-bold">Hamkorlik qilaylik</h2>
           <p className="text-muted-foreground">
             Pitch deck, moliyaviy prognoz va batafsil ma'lumot olish uchun bog'laning.
           </p>
-          <Button size="lg" className="rounded-xl" asChild>
+          <Button size="lg" className="rounded-2xl h-14" asChild>
             <Link to="/contact">Bog'lanish <ArrowRight className="w-5 h-5 ml-1" /></Link>
           </Button>
         </div>
