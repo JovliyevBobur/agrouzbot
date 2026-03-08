@@ -79,10 +79,10 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-dark-green">
+      <section ref={heroRef} className="relative overflow-hidden min-h-[90vh] flex items-center">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110" />
-          <div className="absolute inset-0 bg-background/60" />
+          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110 brightness-90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(150_25%_8%/0.5)] via-transparent to-[hsl(150_25%_8%/0.7)]" />
         </motion.div>
 
         {/* Floating orbs */}
@@ -163,12 +163,12 @@ const Index = () => {
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-20 max-w-5xl mx-auto"
           >
-            <div className="rounded-2xl border bg-card/80 backdrop-blur-sm shadow-2xl shadow-primary/10 overflow-hidden hover-lift">
-              <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
-                <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                <div className="w-3 h-3 rounded-full bg-sun/60" />
-                <div className="w-3 h-3 rounded-full bg-primary/60" />
-                <span className="ml-3 text-xs text-muted-foreground">Agro Bot Dashboard</span>
+            <div className="rounded-2xl border border-white/10 bg-[hsl(150_25%_8%/0.6)] backdrop-blur-sm shadow-2xl shadow-black/30 overflow-hidden hover-lift">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-black/30">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+                <span className="ml-3 text-xs text-white/70">Agro Bot Dashboard</span>
               </div>
               <img
                 src={heroDashboard}
@@ -206,16 +206,16 @@ const Index = () => {
                 viewport={{ once: true }}
                 custom={i}
               >
-                <Card className="h-full hover-lift border-destructive/10 bg-destructive/[0.02] group">
+                <Card className="h-full hover-lift border-white/10 bg-white/[0.05] backdrop-blur-sm group">
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <item.icon className="w-6 h-6 text-destructive" />
+                      <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <item.icon className="w-6 h-6 text-red-400" />
                       </div>
-                      <span className="text-2xl font-heading font-bold text-destructive/30">{item.stat}</span>
+                      <span className="text-2xl font-heading font-bold text-red-400/60">{item.stat}</span>
                     </div>
-                    <h3 className="font-heading font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-semibold text-lg text-white">{item.title}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
                   </CardContent>
                 </Card>
               </motion.div>
