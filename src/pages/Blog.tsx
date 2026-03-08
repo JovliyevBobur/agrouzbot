@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import heroWheat from "@/assets/hero-wheat.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, Tag } from "lucide-react";
