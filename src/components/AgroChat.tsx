@@ -135,13 +135,17 @@ export default function AgroChat() {
         )}
       </AnimatePresence>
 
-      <motion.button
-        onClick={() => setOpen(!open)}
-        className="fixed bottom-4 right-4 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
-        whileTap={{ scale: 0.9 }}
-      >
-        {open ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
-      </motion.button>
+      {/* Weather/Clock + Chat button row */}
+      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-3">
+        <WeatherClock />
+        <motion.button
+          onClick={() => setOpen(!open)}
+          className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
+          whileTap={{ scale: 0.9 }}
+        >
+          {open ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
+        </motion.button>
+      </div>
     </>
   );
 }
