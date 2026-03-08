@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="flex gap-2 w-full md:w-auto">
               <Input
                 placeholder="Email manzilingiz"
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/50 h-11"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 h-11"
               />
               <Button variant="secondary" size="icon" className="h-11 w-11 shrink-0">
                 <Send className="w-4 h-4" />
