@@ -163,7 +163,7 @@ const Index = () => {
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-20 max-w-5xl mx-auto"
           >
-            <div className="rounded-2xl border bg-card/80 backdrop-blur-sm shadow-2xl shadow-primary/10 overflow-hidden hover-lift">
+            <div className="rounded-2xl border border-white/10 bg-[hsl(150_25%_8%/0.6)] backdrop-blur-sm shadow-2xl shadow-black/30 overflow-hidden hover-lift">
               <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
                 <div className="w-3 h-3 rounded-full bg-sun/60" />
