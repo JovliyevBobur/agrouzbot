@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Calendar, ArrowRight, Tag, Clock } from "lucide-react";
+import { Calendar, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -42,10 +42,6 @@ const Blog = () => {
                         <span className="inline-flex items-center gap-1">
                           <Calendar className="w-3 h-3" />
                           {post.date}
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {post.readTime}
                         </span>
                       </div>
                       <h3 className="font-heading font-semibold text-lg group-hover:text-primary transition-colors">

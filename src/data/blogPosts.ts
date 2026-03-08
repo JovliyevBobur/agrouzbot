@@ -4,9 +4,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   tag: string;
-  readTime: string;
   content: string;
-  author: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -14,10 +12,8 @@ export const blogPosts: BlogPost[] = [
     slug: "tuproq-sogligini-tekshirish",
     title: "Tuproq sog'lig'ini qanday tekshirish kerak?",
     excerpt: "Tuproq pH, namligi va mineral tarkibini bilish — hosildorlikning asosi. Bu maqolada oddiy usullardan IoT sensorgacha bo'lgan yechimlarni ko'rib chiqamiz.",
-    date: "2025-03-01",
+    date: "2026-03-01",
     tag: "Tuproq",
-    readTime: "8 daqiqa",
-    author: "Dr. Gulnora Tosheva",
     content: `
 ## Nima uchun tuproq sog'lig'i muhim?
 
@@ -72,10 +68,8 @@ Tuproq sog'lig'ini muntazam tekshirish — hosildorlikni oshirish va xarajatlarn
     slug: "suvni-tejash-usullari",
     title: "Suvni tejashning 5 ta samarali usuli",
     excerpt: "O'zbekistonda suv tanqisligi kuchayib bormoqda. Tomchilatib sug'orish, mulchalash va AI sug'orish jadvali — eng samarali usullar.",
-    date: "2025-02-20",
+    date: "2026-02-20",
     tag: "Suv tejash",
-    readTime: "6 daqiqa",
-    author: "Sardor Raxmatov",
     content: `
 ## O'zbekistonda suv muammosi
 
@@ -119,10 +113,8 @@ Suv — O'zbekiston uchun strategik resurs. Zamonaviy texnologiyalar yordamida h
     slug: "ai-qishloq-xojaligida",
     title: "Sun'iy intellekt qishloq xo'jaligida: dunyo tajribasi",
     excerpt: "Hindiston, Braziliya va AQShda AI qanday qo'llanilmoqda? O'zbekiston uchun qanday saboqlar bor?",
-    date: "2025-02-10",
+    date: "2026-02-10",
     tag: "AI",
-    readTime: "10 daqiqa",
-    author: "Nodira Karimova",
     content: `
 ## AI — qishloq xo'jaligining kelajagi
 
@@ -166,10 +158,8 @@ AI qishloq xo'jaligining kelajagi. O'zbekiston bu yo'nalishda katta imkoniyatlar
     slug: "iot-sensorlar-qollanma",
     title: "IoT sensorlar: fermer uchun qo'llanma",
     excerpt: "Tuproq sensorlarini qanday tanlash, o'rnatish va ulardan samarali foydalanish bo'yicha to'liq qo'llanma.",
-    date: "2025-01-28",
+    date: "2026-01-28",
     tag: "IoT",
-    readTime: "7 daqiqa",
-    author: "Sardor Raxmatov",
     content: `
 ## IoT sensorlar nima?
 
@@ -229,10 +219,8 @@ IoT sensorlar zamonaviy dehqonchilikning ajralmas qismi. Ular tuproq holati haqi
     slug: "ndvi-indeksi",
     title: "NDVI indeksi nima va u nima uchun kerak?",
     excerpt: "Yo'ldosh tasvirlari orqali ekin salomatligini kuzatish — NDVI indeksining ahamiyati va uni qanday ishlatish.",
-    date: "2025-01-15",
+    date: "2026-01-15",
     tag: "Yo'ldosh",
-    readTime: "5 daqiqa",
-    author: "Nodira Karimova",
     content: `
 ## NDVI nima?
 
@@ -288,10 +276,8 @@ NDVI — oddiy, lekin juda kuchli vosita. U fermerga dalasidagi muammolarni erta
     slug: "agritech-startaplar-uzbekistan",
     title: "O'zbekistonda agritech startaplar: imkoniyatlar va qiyinchiliklar",
     excerpt: "Agritech sohasida startap boshlash uchun nimalar kerak? Grantlar, bozor va texnologiyalar haqida.",
-    date: "2025-01-05",
+    date: "2026-01-05",
     tag: "Biznes",
-    readTime: "9 daqiqa",
-    author: "Jamshid Alimov",
     content: `
 ## Nima uchun agritech?
 
