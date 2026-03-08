@@ -45,11 +45,6 @@ const Navbar = () => {
           <span className="hidden sm:inline">Agro Bot</span>
         </Link>
 
-        {/* Weather & Clock */}
-        <div className="hidden md:block">
-          <WeatherClock />
-        </div>
-
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
