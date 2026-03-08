@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, User, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 
 const BlogArticle = () => {
