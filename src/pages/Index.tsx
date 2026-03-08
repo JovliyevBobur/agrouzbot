@@ -206,16 +206,16 @@ const Index = () => {
                 viewport={{ once: true }}
                 custom={i}
               >
-                <Card className="h-full hover-lift border-destructive/10 bg-destructive/[0.02] group">
+                <Card className="h-full hover-lift border-white/10 bg-white/[0.05] backdrop-blur-sm group">
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <item.icon className="w-6 h-6 text-destructive" />
+                      <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <item.icon className="w-6 h-6 text-red-400" />
                       </div>
-                      <span className="text-2xl font-heading font-bold text-destructive/30">{item.stat}</span>
+                      <span className="text-2xl font-heading font-bold text-red-400/60">{item.stat}</span>
                     </div>
-                    <h3 className="font-heading font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-semibold text-lg text-white">{item.title}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
                   </CardContent>
                 </Card>
               </motion.div>
