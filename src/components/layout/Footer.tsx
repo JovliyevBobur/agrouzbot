@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm opacity-50">
           <p>© 2025 Agro Bot. Barcha huquqlar himoyalangan.</p>
-          <p>O'zbekiston fermerlari uchun ishlab chiqilgan 🇺🇿</p>
+          <p>O'zbekiston fermerlari uchun ishlab chiqilgan</p>
         </div>
       </div>
     </footer>
