@@ -32,19 +32,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
-      <section className="py-20 md:py-28">
-        <div className="container max-w-3xl space-y-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl font-heading font-bold">Bizning hikoyamiz</h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed mt-6">
-              <p>Agro Bot 2024-yilda Toshkentda tashkil etilgan. Biz O'zbekiston qishloq xo'jaligidagi eng katta muammolarni — suv tanqisligi, tuproq degradatsiyasi va past hosildorlikni — zamonaviy texnologiyalar yordamida hal qilishga qaror qildik.</p>
-              <p>Jamoamiz AI muhandislari, agronomlar va IoT mutaxassislaridan iborat. Biz birinchi pilotni Toshkent viloyatida 50 ta fermer bilan o'tkazdik va natijalar kutilganidan ham yaxshi bo'ldi — fermerlar suvni 35% ga tejab, hosildorlikni 25% ga oshirdilar.</p>
-              <p>Bugun biz O'zbekiston bo'ylab kengayib, Markaziy Osiyo bozorlariga chiqishga tayyorlanmoqdamiz. Bizning maqsadimiz — 2030 yilga kelib har bir O'zbekiston fermeri AI maslahatchiga ega bo'lishi.</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
+
 
       {/* Mission & Vision */}
       <section className="py-20 md:py-28 bg-gradient-section relative">
