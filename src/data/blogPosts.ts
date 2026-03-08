@@ -4,9 +4,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   tag: string;
-  readTime: string;
   content: string;
-  author: string;
 }
 
 export const blogPosts: BlogPost[] = [
