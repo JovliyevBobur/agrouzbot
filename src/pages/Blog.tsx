@@ -43,10 +43,6 @@ const Blog = () => {
                           <Calendar className="w-3 h-3" />
                           {post.date}
                         </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {post.readTime}
-                        </span>
                       </div>
                       <h3 className="font-heading font-semibold text-lg group-hover:text-primary transition-colors">
                         {post.title}

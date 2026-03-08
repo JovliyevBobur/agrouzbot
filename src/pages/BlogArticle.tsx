@@ -36,16 +36,8 @@ const BlogArticle = () => {
               </h1>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
-                  <User className="w-4 h-4" />
-                  {post.author}
-                </span>
-                <span className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
                   {post.date}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {post.readTime}
                 </span>
               </div>
             </motion.div>
