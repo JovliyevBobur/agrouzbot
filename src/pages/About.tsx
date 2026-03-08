@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Heart, Eye, Target, Users, Leaf, Brain } from "lucide-react";
+import creatorPhoto from "@/assets/creator-photo.jpg";
 
 const values = [
   { icon: Heart, title: "Dehqon birinchi", desc: "Har bir qaror dehqon manfaati uchun qabul qilinadi", color: "bg-destructive/10 text-destructive" },
