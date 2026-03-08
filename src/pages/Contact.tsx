@@ -113,7 +113,7 @@ const Contact = () => {
                     { icon: Mail, label: "Email", value: "jbobur005@gmail.com" },
                     { icon: Phone, label: "Telefon", value: "+998 (93) 005-42-87" },
                     { icon: MapPin, label: "Manzil", value: "Xorazm viloyati, Tuproqqal'a tumani" },
-                    { icon: MessageSquare, label: "Telegram", value: "@AgroBot_uz" },
+                    { icon: MessageSquare, label: "Telegram", value: "@Jovliyev_Bobur" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
