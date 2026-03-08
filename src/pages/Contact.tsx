@@ -134,7 +134,7 @@ const Contact = () => {
                   <div className="text-center space-y-2">
                     <MapPin className="w-10 h-10 text-primary mx-auto" />
                     <p className="text-sm text-muted-foreground">Xorazm viloyati, Tuproqqal'a tumani</p>
-                    <p className="text-xs text-muted-foreground">O'zbekiston</p>
+                    <p className="text-xs text-muted-foreground">IT Park, Tuproqqal'a tumani</p>
                   </div>
                 </div>
               </Card>
