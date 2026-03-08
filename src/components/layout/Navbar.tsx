@@ -61,7 +61,9 @@ const Navbar = () => {
                   <Link to="/admin"><Shield className="w-4 h-4 mr-1" /> Admin</Link>
                 </Button>
               )}
-              <span className="text-sm text-muted-foreground max-w-[120px] truncate">{user.email}</span>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/profile">{user.email?.split("@")[0]}</Link>
+              </Button>
               <Button variant="ghost" size="icon" onClick={signOut} className="rounded-full">
                 <LogOut className="w-4 h-4" />
               </Button>

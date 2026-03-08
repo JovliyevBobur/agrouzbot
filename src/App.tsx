@@ -9,6 +9,7 @@ import AgroChat from "@/components/AgroChat";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
 import HowItWorks from "./pages/HowItWorks";
+import Profile from "./pages/Profile";
 import Pricing from "./pages/Pricing";
 import Investors from "./pages/Investors";
 import About from "./pages/About";
@@ -47,6 +48,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/reset-password" element={<ResetPassword />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/users" element={<AdminUsers />} />
               <Route path="/admin/content" element={<AdminContent />} />
