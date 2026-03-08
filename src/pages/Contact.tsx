@@ -110,9 +110,9 @@ const Contact = () => {
                 <h2 className="text-2xl font-heading font-bold mb-6">Bog'lanish ma'lumotlari</h2>
                 <div className="space-y-5">
                   {[
-                    { icon: Mail, label: "Email", value: "info@agrobot.uz" },
-                    { icon: Phone, label: "Telefon", value: "+998 90 123 45 67" },
-                    { icon: MapPin, label: "Manzil", value: "Toshkent shahri, IT Park" },
+                    { icon: Mail, label: "Email", value: "jbobur005@gmail.com" },
+                    { icon: Phone, label: "Telefon", value: "+998 (93) 005-42-87" },
+                    { icon: MapPin, label: "Manzil", value: "Xorazm viloyati, Tuproqqal'a tumani" },
                     { icon: MessageSquare, label: "Telegram", value: "@AgroBot_uz" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4">
