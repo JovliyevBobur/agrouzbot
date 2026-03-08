@@ -131,7 +131,7 @@ const Contact = () => {
               {/* Map */}
               <Card className="overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48876.45!2d60.92!3d41.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50e8d5c0d3f6d3%3A0x2a0e4e8b3e6c2d0e!2sTuproqqala%2C%20Xorazm%20Region%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24438.2!2d60.6486!3d41.5469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50f3e8d5c0d3f3%3A0x4e8b3e6c2d0e2a0e!2sPitnak%2C%20Tuproqqala%20District%2C%20Xorazm%20Region%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
                   width="100%"
                   height="256"
                   style={{ border: 0 }}
