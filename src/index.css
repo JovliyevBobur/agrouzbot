@@ -108,6 +108,9 @@
   .bg-gradient-section {
     background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
   }
+  .bg-gradient-dark-green {
+    background: linear-gradient(160deg, hsl(150 25% 8%) 0%, hsl(160 20% 12%) 40%, hsl(170 15% 10%) 100%);
+  }
   .bg-gradient-radial {
     background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.08) 0%, transparent 70%);
   }
