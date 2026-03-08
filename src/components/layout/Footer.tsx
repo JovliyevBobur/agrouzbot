@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-[hsl(150,20%,8%)] text-[hsl(150,10%,85%)]">
       {/* Newsletter */}
-      <div className="border-b border-background/10">
+      <div className="border-b border-white/10">
         <div className="container py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
             <div>
