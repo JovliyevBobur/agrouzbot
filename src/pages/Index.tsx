@@ -164,11 +164,11 @@ const Index = () => {
             className="mt-20 max-w-5xl mx-auto"
           >
             <div className="rounded-2xl border border-white/10 bg-[hsl(150_25%_8%/0.6)] backdrop-blur-sm shadow-2xl shadow-black/30 overflow-hidden hover-lift">
-              <div className="flex items-center gap-2 px-4 py-3 border-b bg-muted/50">
-                <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                <div className="w-3 h-3 rounded-full bg-sun/60" />
-                <div className="w-3 h-3 rounded-full bg-primary/60" />
-                <span className="ml-3 text-xs text-muted-foreground">Agro Bot Dashboard</span>
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-black/30">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+                <span className="ml-3 text-xs text-white/70">Agro Bot Dashboard</span>
               </div>
               <img
                 src={heroDashboard}
