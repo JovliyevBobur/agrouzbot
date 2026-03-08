@@ -97,8 +97,8 @@ const About = () => {
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
               <Card className="text-center h-full hover-lift border-0 shadow-lg shadow-primary/[0.03]">
                 <CardContent className="p-8 space-y-4">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-leaf/10 flex items-center justify-center mx-auto">
-                    <span className="text-3xl font-heading font-bold text-primary">JB</span>
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg mx-auto">
+                    <img src={creatorPhoto} alt="Jovliyev Bobur" className="w-full h-full object-cover" />
                   </div>
                   <h3 className="font-heading font-semibold text-xl">Jovliyev Bobur</h3>
                   <p className="text-sm text-primary font-medium">Full Stack Developer & Data Analyst</p>
