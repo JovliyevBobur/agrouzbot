@@ -7,6 +7,7 @@ import { MessageSquare, Send, X, Bot, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
+import WeatherClock from "@/components/WeatherClock";
 
 interface Message {
   role: "user" | "assistant";
