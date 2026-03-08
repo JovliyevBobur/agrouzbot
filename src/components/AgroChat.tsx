@@ -13,17 +13,8 @@ interface Message {
   content: string;
 }
 
-const SYSTEM_PROMPT = `Sen Agro Bot — O'zbekiston fermerlariga yordam beradigan sun'iy intellekt yordamchisisan.
-Sen quyidagi sohalarda maslahat bera olasan:
-- Ob-havo prognozi va uning dehqonchilikka ta'siri
-- Ekin tanlash va ekin almashlab ekish tavsiyalari
-- Tuproq tahlili va o'g'itlash
-- Sug'orish usullari va suv tejash
-- Kasallik va zararkunandalarni aniqlash
-- Qishloq xo'jaligi bozor narxlari
-- Zamonaviy agrotexnologiyalar
 
-Javoblaringni qisqa, aniq va amaliy qil. O'zbek tilida gapir.`;
+
 
 export default function AgroChat() {
   const [open, setOpen] = useState(false);
