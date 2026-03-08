@@ -79,10 +79,10 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden min-h-[90vh] flex items-center">
+      <section ref={heroRef} className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-dark-green">
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/75 to-background" />
+          <img src={heroFarmland} alt="O'zbekiston dalasi" className="w-full h-full object-cover scale-110 opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(150_25%_8%)]" />
         </motion.div>
 
         {/* Floating orbs */}
@@ -91,7 +91,7 @@ const Index = () => {
           <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-secondary/8 blur-3xl animate-float-delayed" />
         </div>
 
-        <motion.div style={{ opacity: heroOpacity }} className="container py-24 md:py-36 relative">
+        <motion.div style={{ opacity: heroOpacity }} className="container py-24 md:py-36 relative text-white">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -182,8 +182,8 @@ const Index = () => {
       </section>
 
       {/* Problems */}
-      <section className="py-24 md:py-32 relative">
-        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
+      <section className="py-24 md:py-32 relative bg-gradient-dark-green text-white">
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none opacity-30" />
         <div className="container relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -225,8 +225,8 @@ const Index = () => {
       </section>
 
       {/* Features */}
-      <section className="py-24 md:py-32 bg-gradient-section relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+      <section className="py-24 md:py-32 bg-gradient-dark-green relative text-white">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
         <div className="container relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -292,7 +292,7 @@ const Index = () => {
       </section>
 
       {/* How it works */}
-      <section className="py-24 md:py-32 relative">
+      <section className="py-24 md:py-32 relative bg-gradient-dark-green text-white">
         <div className="absolute inset-0 bg-gradient-radial pointer-events-none" />
         <div className="container relative">
           <motion.div
