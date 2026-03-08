@@ -43,7 +43,6 @@ export default function AgroChat() {
       const { data, error } = await supabase.functions.invoke("agro-chat", {
         body: {
           messages: newMessages.map((m) => ({ role: m.role, content: m.content })),
-          systemPrompt: SYSTEM_PROMPT,
         },
       });
 
