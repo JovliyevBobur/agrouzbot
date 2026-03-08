@@ -6,7 +6,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSepara
 import { Menu, X, Moon, Sun, LogOut, Shield, User, Settings } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
-import WeatherClock from "@/components/WeatherClock";
 import { useAuth } from "@/components/AuthProvider";
 import { useAdmin } from "@/hooks/useAdmin";
 import { useProfile } from "@/hooks/useProfile";
@@ -44,11 +43,6 @@ const Navbar = () => {
           <img src="/logo.png" alt="Agro Bot" className="w-10 h-10 rounded-lg object-cover" />
           <span className="hidden sm:inline">Agro Bot</span>
         </Link>
-
-        {/* Weather & Clock */}
-        <div className="hidden md:block">
-          <WeatherClock />
-        </div>
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
