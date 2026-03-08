@@ -76,7 +76,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Toshkent, O'zbekiston</span>
+                <span>Xorazm viloyati, Tuproqqal'a tumani</span>
               </div>
             </div>
           </div>
