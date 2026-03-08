@@ -9,8 +9,10 @@ import { blogPosts } from "@/data/blogPosts";
 const Blog = () => {
   return (
     <Layout>
-      <section className="py-20 md:py-28 bg-gradient-hero">
-        <div className="container">
+      <section className="py-20 md:py-28 relative overflow-hidden">
+        <img src={heroWheat} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-[hsl(150_25%_8%/0.85)]" />
+        <div className="container relative text-white">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Blog</span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold">Bilim markazi</h1>
