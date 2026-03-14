@@ -124,7 +124,7 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden overflow-hidden bg-background border-b"
           >
-            <div className="container py-4 flex flex-col gap-2">
+            <div className="container py-4 px-4 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.path}

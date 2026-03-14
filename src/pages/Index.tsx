@@ -371,7 +371,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto space-y-8"
           >
-            <h2 className="text-3xl md:text-5xl font-heading font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold">
               Agro Bot ni sinab ko'ring
             </h2>
             <p className="text-lg opacity-80 max-w-lg mx-auto">
