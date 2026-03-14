@@ -306,7 +306,7 @@ const Index = () => {
             <span className="text-sm font-medium text-secondary uppercase tracking-wider">Jarayon</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold mt-3">Qanday ishlaydi?</h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
