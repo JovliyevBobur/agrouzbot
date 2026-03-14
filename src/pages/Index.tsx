@@ -270,7 +270,7 @@ const Index = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-14 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-leaf" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,...')] opacity-5" />
         <div className="container relative">
