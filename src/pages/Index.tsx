@@ -358,7 +358,7 @@ const Index = () => {
 
 
       {/* CTA */}
-      <section className="py-24 md:py-32 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-leaf" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary-foreground/5 blur-2xl" />
