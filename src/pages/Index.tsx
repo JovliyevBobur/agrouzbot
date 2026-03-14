@@ -294,7 +294,7 @@ const Index = () => {
       </section>
 
       {/* How it works */}
-      <section className="py-24 md:py-32 relative bg-gradient-dark-green text-white">
+      <section className="py-16 sm:py-24 md:py-32 relative bg-gradient-dark-green text-white">
         <div className="absolute inset-0 bg-gradient-radial pointer-events-none" />
         <div className="container relative">
           <motion.div
