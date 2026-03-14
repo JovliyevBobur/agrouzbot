@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Newsletter */}
       <div className="border-b border-white/10">
         <div className="container py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 max-w-4xl mx-auto px-4">
             <div>
               <h3 className="font-heading font-bold text-xl">Yangiliklardan xabardor bo'ling</h3>
               <p className="text-sm opacity-70 mt-1">Agritech yangiliklari va foydali maslahatlar</p>
