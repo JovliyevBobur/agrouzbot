@@ -23,7 +23,6 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
   const { user, signOut } = useAuth();
   const { isAdmin } = useAdmin();
   const { profile } = useProfile();
