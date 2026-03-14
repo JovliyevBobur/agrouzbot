@@ -130,7 +130,7 @@ const Index = () => {
               transition={{ delay: 0.35, duration: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <Button size="lg" className="text-base px-8 h-14 rounded-2xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all" asChild>
+              <Button size="lg" className="text-base px-6 sm:px-8 h-12 sm:h-14 rounded-2xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all w-full sm:w-auto" asChild>
                 <Link to="/auth">
                   Boshlash <ArrowRight className="w-5 h-5 ml-1" />
                 </Link>
