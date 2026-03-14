@@ -161,7 +161,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-20 max-w-5xl mx-auto"
+            className="mt-12 sm:mt-20 max-w-5xl mx-auto px-2">
           >
             <div className="rounded-2xl border-2 border-white/30 bg-black shadow-2xl shadow-black/60 overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-white/20 bg-[hsl(150_25%_8%)]">
