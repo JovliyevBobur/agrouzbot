@@ -3,9 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, X, Moon, Sun, LogOut, Shield, User, Settings } from "lucide-react";
+import { Menu, X, LogOut, Shield, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "@/components/ThemeProvider";
 import { useAuth } from "@/components/AuthProvider";
 import { useAdmin } from "@/hooks/useAdmin";
 import { useProfile } from "@/hooks/useProfile";
@@ -24,7 +23,6 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
   const { user, signOut } = useAuth();
   const { isAdmin } = useAdmin();
   const { profile } = useProfile();
@@ -37,11 +35,11 @@ const Navbar = () => {
   const displayName = profile?.full_name || user?.email?.split("@")[0] || "User";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b">
-      <div className="container flex items-center justify-between h-16 md:h-18">
-        <Link to="/" className="flex items-center gap-2 font-heading font-bold text-xl">
-          <img src="/logo.png" alt="Agro Bot" className="w-10 h-10 rounded-lg object-cover" />
-          <span className="hidden sm:inline">Agro Bot</span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50">
+      <div className="container flex items-center justify-between h-14 sm:h-16 md:h-18 px-4">
+        <Link to="/" className="flex items-center gap-2 font-heading font-bold text-lg sm:text-xl">
+          <img src="/logo.png" alt="Agro Bot" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-cover" />
+          <span>Agro Bot</span>
         </Link>
 
         {/* Desktop nav */}
@@ -63,9 +61,6 @@ const Navbar = () => {
 
         {/* Desktop right */}
         <div className="hidden lg:flex items-center gap-2">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-          </Button>
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -106,9 +101,6 @@ const Navbar = () => {
 
         {/* Mobile */}
         <div className="lg:hidden flex items-center gap-2">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-          </Button>
           {user && (
             <Link to="/profile">
               <Avatar className="w-8 h-8 border-2 border-primary/20">
@@ -132,7 +124,7 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden overflow-hidden bg-background border-b"
           >
-            <div className="container py-4 flex flex-col gap-2">
+            <div className="container py-4 px-4 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.path}

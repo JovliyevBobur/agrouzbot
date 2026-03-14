@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Newsletter */}
       <div className="border-b border-white/10">
         <div className="container py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 max-w-4xl mx-auto px-4">
             <div>
               <h3 className="font-heading font-bold text-xl">Yangiliklardan xabardor bo'ling</h3>
               <p className="text-sm opacity-70 mt-1">Agritech yangiliklari va foydali maslahatlar</p>
@@ -27,10 +27,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container py-12 sm:py-16 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 font-heading font-bold text-xl">
               <img src="/logo.png" alt="Agro Bot" className="w-10 h-10 rounded-lg object-cover" />
               <span>Agro Bot</span>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h4 className="font-heading font-semibold mb-4">Bog'lanish</h4>
             <div className="flex flex-col gap-3 text-sm opacity-70">
               <div className="flex items-center gap-2">
