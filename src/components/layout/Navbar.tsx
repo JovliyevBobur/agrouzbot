@@ -35,11 +35,11 @@ const Navbar = () => {
   const displayName = profile?.full_name || user?.email?.split("@")[0] || "User";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b">
-      <div className="container flex items-center justify-between h-16 md:h-18">
-        <Link to="/" className="flex items-center gap-2 font-heading font-bold text-xl">
-          <img src="/logo.png" alt="Agro Bot" className="w-10 h-10 rounded-lg object-cover" />
-          <span className="hidden sm:inline">Agro Bot</span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50">
+      <div className="container flex items-center justify-between h-14 sm:h-16 md:h-18 px-4">
+        <Link to="/" className="flex items-center gap-2 font-heading font-bold text-lg sm:text-xl">
+          <img src="/logo.png" alt="Agro Bot" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-cover" />
+          <span>Agro Bot</span>
         </Link>
 
         {/* Desktop nav */}
