@@ -194,7 +194,7 @@ const Index = () => {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <span className="text-sm font-medium text-accent uppercase tracking-wider">Muammo</span>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold mt-3">
               O'zbekiston qishloq xo'jaligidagi <span className="text-gradient-accent">muammolar</span>
             </h2>
           </motion.div>
