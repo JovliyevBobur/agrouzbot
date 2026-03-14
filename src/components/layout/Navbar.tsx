@@ -61,9 +61,6 @@ const Navbar = () => {
 
         {/* Desktop right */}
         <div className="hidden lg:flex items-center gap-2">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-          </Button>
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
