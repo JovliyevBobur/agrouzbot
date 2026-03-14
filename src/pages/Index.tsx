@@ -285,7 +285,7 @@ const Index = () => {
                 className="text-center text-primary-foreground"
               >
                 <s.icon className="w-8 h-8 mx-auto mb-3 opacity-80" />
-                <p className="text-4xl md:text-6xl font-heading font-bold">{s.value}</p>
+                <p className="text-3xl sm:text-4xl md:text-6xl font-heading font-bold">{s.value}</p>
                 <p className="text-sm md:text-base mt-2 opacity-80">{s.label}</p>
               </motion.div>
             ))}
