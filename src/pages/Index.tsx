@@ -119,7 +119,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.6 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
             >
               Sun'iy yo'ldosh tasvirlari va tuproq sensorlari orqali fermerlarga aniq, ilmiy asoslangan tavsiyalar beruvchi platforma.
             </motion.p>
