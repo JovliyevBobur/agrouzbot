@@ -145,7 +145,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex items-center justify-center gap-6 pt-4"
+              className="flex items-center justify-center gap-4 sm:gap-6 pt-4 flex-wrap">
             >
               {partners.map((p, i) => (
                 <div key={i} className="flex items-center gap-1.5 text-xs text-muted-foreground/70">
