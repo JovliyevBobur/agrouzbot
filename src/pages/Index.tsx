@@ -229,7 +229,7 @@ const Index = () => {
       {/* Features */}
       <section className="py-16 sm:py-24 md:py-32 bg-gradient-dark-green relative text-white">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
-        <div className="container relative">
+        <div className="container relative px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
