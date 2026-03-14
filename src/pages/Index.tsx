@@ -274,7 +274,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-leaf" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,...')] opacity-5" />
         <div className="container relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {stats.map((s, i) => (
               <motion.div
                 key={i}
