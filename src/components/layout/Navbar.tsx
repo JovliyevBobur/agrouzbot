@@ -101,9 +101,6 @@ const Navbar = () => {
 
         {/* Mobile */}
         <div className="lg:hidden flex items-center gap-2">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-          </Button>
           {user && (
             <Link to="/profile">
               <Avatar className="w-8 h-8 border-2 border-primary/20">
