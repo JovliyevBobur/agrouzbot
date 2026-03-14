@@ -237,7 +237,7 @@ const Index = () => {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Yechim</span>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold mt-3">
               Agro Bot platforma <span className="text-gradient-primary">imkoniyatlari</span>
             </h2>
             <p className="text-muted-foreground mt-4 text-lg">
