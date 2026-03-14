@@ -135,7 +135,7 @@ const Index = () => {
                   Boshlash <ArrowRight className="w-5 h-5 ml-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-8 h-14 rounded-2xl glass" asChild>
+              <Button size="lg" variant="outline" className="text-base px-6 sm:px-8 h-12 sm:h-14 rounded-2xl glass w-full sm:w-auto" asChild>
                 <Link to="/how-it-works">Demo ko'rish</Link>
               </Button>
             </motion.div>
