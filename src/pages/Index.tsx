@@ -198,7 +198,7 @@ const Index = () => {
               O'zbekiston qishloq xo'jaligidagi <span className="text-gradient-accent">muammolar</span>
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {problems.map((item, i) => (
               <motion.div
                 key={i}
