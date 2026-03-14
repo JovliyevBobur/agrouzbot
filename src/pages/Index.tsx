@@ -186,7 +186,7 @@ const Index = () => {
       {/* Problems */}
       <section className="py-16 sm:py-24 md:py-32 relative bg-gradient-dark-green text-white">
         <div className="absolute inset-0 bg-gradient-mesh pointer-events-none opacity-30" />
-        <div className="container relative">
+        <div className="container relative px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
