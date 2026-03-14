@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h4 className="font-heading font-semibold mb-4">Bog'lanish</h4>
             <div className="flex flex-col gap-3 text-sm opacity-70">
               <div className="flex items-center gap-2">
